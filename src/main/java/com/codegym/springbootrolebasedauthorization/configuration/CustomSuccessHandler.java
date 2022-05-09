@@ -60,15 +60,15 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
     }
 
     private boolean isUser(List<String> roles) {
-        return roles.contains("USER");
+        return roles.contains("ROLE_USER");
     }
 
     private boolean isAdmin(List<String> roles) {
-        return roles.contains("ADMIN");
+        return roles.contains("ROLE_ADMIN");
     }
 
     private boolean isDba(List<String> roles) {
-        return roles.contains("DBA");
+        return roles.contains("ROLE_DBA");
     }
 
     public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
